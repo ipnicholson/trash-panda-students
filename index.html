@@ -1,0 +1,1235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="jumbotron text-center">
+  <h1>Is This Recyclable?</h1>
+  <p>It depends what kind of object it is. If its plastic, paper, metal, ect. Recyclable items consist of plastic, cartons, metal, glass, newspaper, magazines, books, paper, mail, plastic bottles, plastic bags, foam cups or containers, and flattened cardboard.</p> 
+</div>
+  
+<div class="container">
+ 
+</div>
+<div class="input-group mb-3">
+  <div class="custom-file">
+   <form action="https://vision.googleapis.com/v1/images:annotate?key=AIzaSyDApr3kFP5jBzjOPhjEO673eCrvF7YFbRM" method="post"    >
+        <label for="name">Image URL: </label>
+        <input type="text" name="image URL" id="name" required>
+        <input type="submit" value="Upload">
+   </form> 
+  </div>
+</div>
+
+   <button onclick="myFunction()">Try it</button>
+
+
+<p>Looping through arrays inside arrays.</p>
+
+<p id="demo"></p>
+
+ <script>   
+var myObj, i, j, x = "";
+myObj = {
+  "labelAnnotations": [
+    {
+      "mid": "/m/0dq75",
+      "description": "raccoon",
+      "score": 0.96930575,
+      "topicality": 0.96930575
+    },
+    {
+      "mid": "/m/0145sj",
+      "description": "procyonidae",
+      "score": 0.93821806,
+      "topicality": 0.93821806
+    },
+    {
+      "mid": "/m/04rky",
+      "description": "mammal",
+      "score": 0.9265422,
+      "topicality": 0.9265422
+    },
+    {
+      "mid": "/m/035qhg",
+      "description": "fauna",
+      "score": 0.90421194,
+      "topicality": 0.90421194
+    },
+    {
+      "mid": "/m/01280g",
+      "description": "wildlife",
+      "score": 0.88949275,
+      "topicality": 0.88949275
+    },
+    {
+      "mid": "/m/0fbf1m",
+      "description": "terrestrial animal",
+      "score": 0.85897654,
+      "topicality": 0.85897654
+    },
+    {
+      "mid": "/m/01j33z",
+      "description": "viverridae",
+      "score": 0.8401317,
+      "topicality": 0.8401317
+    },
+    {
+      "mid": "/m/01fzzx",
+      "description": "procyon",
+      "score": 0.82341105,
+      "topicality": 0.82341105
+    },
+    {
+      "mid": "/m/01l7qd",
+      "description": "whiskers",
+      "score": 0.7433628,
+      "topicality": 0.7433628
+    },
+    {
+      "mid": "/m/08t9c_",
+      "description": "grass",
+      "score": 0.73604625,
+      "topicality": 0.73604625
+    },
+    {
+      "mid": "/m/05mqq3",
+      "description": "snout",
+      "score": 0.7273507,
+      "topicality": 0.7273507
+    },
+    {
+      "mid": "/m/05nnm",
+      "description": "organism",
+      "score": 0.6846069,
+      "topicality": 0.6846069
+    }
+  ],
+  "safeSearchAnnotation": {
+    "adult": "VERY_UNLIKELY",
+    "spoof": "UNLIKELY",
+    "medical": "VERY_UNLIKELY",
+    "violence": "VERY_UNLIKELY",
+    "racy": "VERY_UNLIKELY"
+  },
+  "imagePropertiesAnnotation": {
+    "dominantColors": {
+      "colors": [
+        {
+          "color": {
+            "red": 93,
+            "green": 85,
+            "blue": 66
+          },
+          "score": 0.21658659,
+          "pixelFraction": 0.062371135
+        },
+        {
+          "color": {
+            "red": 108,
+            "green": 126,
+            "blue": 61
+          },
+          "score": 0.032535803,
+          "pixelFraction": 0.045139913
+        },
+        {
+          "color": {
+            "red": 124,
+            "green": 116,
+            "blue": 96
+          },
+          "score": 0.19714034,
+          "pixelFraction": 0.07518409
+        },
+        {
+          "color": {
+            "red": 124,
+            "green": 164,
+            "blue": 53
+          },
+          "score": 0.0019491473,
+          "pixelFraction": 0.019440353
+        },
+        {
+          "color": {
+            "red": 124,
+            "green": 114,
+            "blue": 105
+          },
+          "score": 0.100882694,
+          "pixelFraction": 0.061119292
+        },
+        {
+          "color": {
+            "red": 96,
+            "green": 87,
+            "blue": 78
+          },
+          "score": 0.08092003,
+          "pixelFraction": 0.045729015
+        },
+        {
+          "color": {
+            "red": 159,
+            "green": 151,
+            "blue": 128
+          },
+          "score": 0.07484787,
+          "pixelFraction": 0.051178202
+        },
+        {
+          "color": {
+            "red": 59,
+            "green": 54,
+            "blue": 35
+          },
+          "score": 0.06847547,
+          "pixelFraction": 0.026141385
+        },
+        {
+          "color": {
+            "red": 159,
+            "green": 150,
+            "blue": 142
+          },
+          "score": 0.031917308,
+          "pixelFraction": 0.031222386
+        },
+        {
+          "color": {
+            "red": 143,
+            "green": 160,
+            "blue": 96
+          },
+          "score": 0.025683353,
+          "pixelFraction": 0.10044183
+        }
+      ]
+    }
+  },
+  "cropHintsAnnotation": {
+    "cropHints": [
+      {
+        "boundingPoly": {
+          "vertices": [
+            {
+              "x": 146
+            },
+            {
+              "x": 538
+            },
+            {
+              "x": 538,
+              "y": 486
+            },
+            {
+              "x": 146,
+              "y": 486
+            }
+          ]
+        },
+        "confidence": 0.79999995,
+        "importanceFraction": 0.78
+      },
+      {
+        "boundingPoly": {
+          "vertices": [
+            {
+              "x": 104
+            },
+            {
+              "x": 594
+            },
+            {
+              "x": 594,
+              "y": 486
+            },
+            {
+              "x": 104,
+              "y": 486
+            }
+          ]
+        },
+        "confidence": 0.79999995,
+        "importanceFraction": 0.9
+      },
+      {
+        "boundingPoly": {
+          "vertices": [
+            {
+              "x": 48
+            },
+            {
+              "x": 629
+            },
+            {
+              "x": 629,
+              "y": 486
+            },
+            {
+              "x": 48,
+              "y": 486
+            }
+          ]
+        },
+        "confidence": 0.79999995,
+        "importanceFraction": 0.96999997
+      }
+    ]
+  },
+  "webDetection": {
+    "webEntities": [
+      {
+        "entityId": "/m/0dq75",
+        "score": 1.178925,
+        "description": "Raccoon"
+      },
+      {
+        "entityId": "/m/0j60j",
+        "score": 1.1298375,
+        "description": "Maine Coon"
+      },
+      {
+        "entityId": "/m/0bt9lr",
+        "score": 0.83745,
+        "description": "Dog"
+      },
+      {
+        "entityId": "/m/071qp",
+        "score": 0.801,
+        "description": "Squirrel"
+      },
+      {
+        "entityId": "/m/01280g",
+        "score": 0.7001,
+        "description": "Wildlife"
+      },
+      {
+        "entityId": "/m/0jbk",
+        "score": 0.6318,
+        "description": "Animal"
+      },
+      {
+        "entityId": "/m/02qrsf",
+        "score": 0.5938,
+        "description": "Animal control and welfare service"
+      },
+      {
+        "entityId": "/m/0fsd1",
+        "score": 0.5057,
+        "description": "Rabies"
+      },
+      {
+        "entityId": "/m/03zfrv",
+        "score": 0.4575,
+        "description": "stock.xchng"
+      },
+      {
+        "entityId": "/m/01l7qd",
+        "score": 0.4181,
+        "description": "Whiskers"
+      },
+      {
+        "entityId": "/m/0g8k7s",
+        "score": 0.3908,
+        "description": "Trapping"
+      },
+      {
+        "entityId": "/m/04h3kx",
+        "score": 0.3906,
+        "description": "Cuteness"
+      },
+      {
+        "entityId": "/m/0rf9hgr",
+        "score": 0.3476,
+        "description": "Pixabay"
+      },
+      {
+        "entityId": "/g/11bc58kld4",
+        "score": 0.10902001,
+        "description": "Raccoons"
+      },
+      {
+        "entityId": "/m/01yrx",
+        "score": 0.022356,
+        "description": "Cat"
+      }
+    ],
+    "fullMatchingImages": [
+      {
+        "url": "https://i1.wp.com/nixpest.com/wp-content/uploads/2017/09/raccoon-1905528.jpg?fit=885616&amp;ssl=1"
+      },
+      {
+        "url": "https://c.pxhere.com/photos/f4/af/raccoon_animal_wildlife_forest_woods_nature_cute_close_up-1163224.jpg!d"
+      },
+      {
+        "url": "https://wakyma.com/blog/wp-content/uploads/2018/04/raccoon-1905528_1920.jpg"
+      },
+      {
+        "url": "http://enbanrider.com/RPG/wp-content/uploads/2017/03/tanuki.jpg"
+      },
+      {
+        "url": "https://static1.squarespace.com/static/58e2e0c6b3db2b46d45af83f/t/5a95853c0d92976c7d433dd2/1519748441034/raccoon-1905528.jpg"
+      },
+      {
+        "url": "https://static1.squarespace.com/static/58f067e937c581141182beba/58f2fbb6ebbd1a9ee47af9b5/58f3077d9de4bbfd3ac55b7c/1492322637134/raccoon-1905528_1920.jpg"
+      },
+      {
+        "url": "http://static1.squarespace.com/static/57b00fb78419c2c454efc0cf/57bdce4bd1758e6b2bba2628/5aaf4a021ae6cf0c78edc550/1522726253337/raccoon-1905528_1920.jpg?format=1000w"
+      },
+      {
+        "url": "http://doroashi.com/wp-content/uploads/2018/03/raccoon-1905528_1280.jpg"
+      },
+      {
+        "url": "https://resteasypestcontrol.com/wp-content/uploads/2014/10/raccoon.jpg"
+      },
+      {
+        "url": "https://www.recordeuropa.com/wp-content/uploads/2017/06/guaxinim.jpg"
+      },
+      {
+        "url": "https://cdn-images-1.medium.com/max/960/1*Hagu2CCgk2iWl_fJqLAXgQ.jpeg"
+      },
+      {
+        "url": "https://bloximages.chicago2.vip.townnews.com/insidenova.com/content/tncms/assets/v3/editorial/4/f6/4f6b3fe4-550f-11e8-abea-ab7e1ab06598/5af57fee2d5a8.image.jpg"
+      },
+      {
+        "url": "https://i0.wp.com/www.museulinguaportuguesa.org.br/wp-content/uploads/2017/11/Guaxinim.jpg?resize=960%2C668&amp;ssl=1"
+      },
+      {
+        "url": "http://img.u-note.me/note/uploadimage/1490542389046.jpg"
+      },
+      {
+        "url": "https://d-pt.ppstatic.pl/k/r/1/fa/bf/5948f9271255a_o.jpg?1498028404"
+      },
+      {
+        "url": "http://paponaweb.com.br/wp-content/uploads/2017/08/guaxinim.jpg"
+      },
+      {
+        "url": "http://www.pratikbilgievi.com/uploads/posts/2018-04/1523123000_rakun.jpg"
+      },
+      {
+        "url": "https://bloximages.chicago2.vip.townnews.com/insidenova.com/content/tncms/assets/v3/editorial/4/f6/4f6b3fe4-550f-11e8-abea-ab7e1ab06598/5af57fee2d5a8.image.jpg?resize=905%2C630"
+      },
+      {
+        "url": "https://informazone.com/wp-content/uploads/2018/01/raccoon-1905528_1280.jpg"
+      },
+      {
+        "url": "https://d-pt.ppstatic.pl/k/r/1/fa/bf/5948f9271255a_p.jpg?1498028404"
+      },
+      {
+        "url": "http://shamrockwildlifeservices.com/wp-content/uploads/2017/12/raccoonremoval1.jpg"
+      },
+      {
+        "url": "https://static1.squarespace.com/static/5991deefd2b857ad0785bacd/t/599d991149fc2b1b80aa73a3/1503500562738/raccoon+stock+pic.JPG?format=750w"
+      },
+      {
+        "url": "https://i0.pickpik.com/photos/497/996/840/raccoon-animal-wildlife-forest-preview.jpg"
+      },
+      {
+        "url": "http://runsickcattle.com/data/out/21/538172.jpg"
+      },
+      {
+        "url": "https://www.seikatsu110.jp/cms/wp-content/uploads/2017/11/e4c8b946c2a1a1abc8652938d04383e9.jpg"
+      },
+      {
+        "url": "http://alaa-eldeen.ahram.org.eg/Media/NewsMedia/2017/10/12/2017-636434206103722147-372_Inner_600x390.jpg"
+      },
+      {
+        "url": "https://marketplace.canva.com/MACWWTQXfng/1/thumbnail_large/canva-raccoon%2C-animal%2C-wildlife%2C-forest%2C-woods%2C-nature%2C-cute-MACWWTQXfng.jpg"
+      },
+      {
+        "url": "http://%E3%81%9F%E3%81%AC%E3%81%8D.xyz/wp-content/uploads/2017/02/raccoon-1905528__340.jpg"
+      },
+      {
+        "url": "https://static1.squarespace.com/static/58c891cd37c58161b5d58f42/58c8a9ae1b10e3a1c3bec2e7/59752667ebbd1a4c6600be04/1500849786272/raccoon-1905528_1920+copy+2.jpg?format=500w"
+      },
+      {
+        "url": "https://animalbattles.wealthyblogs.com/wp-content/uploads/2018/01/raccoon-1905528_640.jpg"
+      },
+      {
+        "url": "https://www.maxpixel.net/static/photo/640/Woods-Nature-Forest-Wildlife-Cute-Animal-Raccoon-1905528.jpg"
+      },
+      {
+        "url": "https://2.bp.blogspot.com/-u0EcXwqzirM/WUjTP6sH10I/AAAAAAAAWXI/dkiEksUSr1gq3AVbywWjQkHOhiQAKc4IgCEwYBhgL/s1600/raccoon-1905528__340.jpg"
+      },
+      {
+        "url": "https://cdn.pixabay.com/photo/2016/12/14/03/08/raccoon-1905528__340.jpg"
+      },
+      {
+        "url": "http://www.kgv-freiroda.de/wpimages/wp935ba60f_05_06.jpg"
+      },
+      {
+        "url": "https://i0.wp.com/www.someofthisistrue.com/wp-content/uploads/2017/05/raccoon-1905528_640.jpg?resize=470%2C328"
+      },
+      {
+        "url": "https://i0.pickpik.com/photos/497/996/840/raccoon-animal-wildlife-forest-thumb.jpg"
+      },
+      {
+        "url": "https://wakyma.com/blog/wp-content/uploads/2018/04/raccoon-1905528_1920-368x256.jpg"
+      },
+      {
+        "url": "https://pm1.narvii.com/6522/6fa59fd420a877005a2cfce4b64952fd72d7e665_hq.jpg"
+      },
+      {
+        "url": "https://cdn.pixabay.com/photo/2016/12/14/03/08/raccoon-1905528__180.jpg"
+      },
+      {
+        "url": "https://static.wixstatic.com/media/f4a539_0c3e8f573579422f8ae19154128d660a~mv2_d_1920_1336_s_2.jpg/v1/crop/x_108,y_0,w_1776,h_1336/fill/w_197,h_148,al_c,q_80,usm_0.66_1.00_0.01/f4a539_0c3e8f573579422f8ae19154128d660a~mv2_d_1920_1336_s_2.webp"
+      }
+    ],
+    "partialMatchingImages": [
+      {
+        "url": "https://images.pexels.com/photos/266067/pexels-photo-266067.jpeg?cs=srgb&amp;dl=animal-baby-close-up-266067.jpg&amp;fm=jpg"
+      },
+      {
+        "url": "https://i2.wp.com/kchan-shokai.com/wp-content/uploads/2017/08/38a02522a4eca4924762a38e1b40758e.jpg"
+      },
+      {
+        "url": "https://i1.wp.com/nixpest.com/wp-content/uploads/2017/09/raccoon-1905528.jpg?resize=1920%2C1080&amp;ssl=1"
+      },
+      {
+        "url": "https://uploads-ssl.webflow.com/57dc5ba03bd579bc1ed6eab6/5b00099ba76c6f41a0ad766e_raccon-welfar-vegan-rights-ethics.jpg"
+      },
+      {
+        "url": "https://www.lasirena.la/__export/1528933481387/sites/debate/img/2018/06/13/raccoon-1905528_1920_crop1528933247882.jpg_423682103.jpg"
+      },
+      {
+        "url": "http://tumamifero.com/wp-content/uploads/2018/04/mapache-5.jpg"
+      },
+      {
+        "url": "http://pesterminate.ca/wp-content/uploads/2018/01/pexels-photo-289565.jpeg"
+      },
+      {
+        "url": "https://www.lasirena.la/__export/1528933481387/sites/debate/img/2018/06/13/raccoon-1905528_1920_crop1528933247882.jpg_1902800913.jpg"
+      },
+      {
+        "url": "https://i2.wp.com/kchan-shokai.com/wp-content/uploads/2017/08/38a02522a4eca4924762a38e1b40758e.jpg?fit=1200%2C835"
+      },
+      {
+        "url": "https://static1.squarespace.com/static/57b00fb78419c2c454efc0cf/57bdce4bd1758e6b2bba2628/5aaf4a021ae6cf0c78edc550/1522726253337/raccoon-1905528_1920.jpg?format=1500w"
+      },
+      {
+        "url": "https://www.swassn.com/wp-content/uploads/2017/11/ertyuytrtyj.jpeg"
+      },
+      {
+        "url": "https://www.lasirena.la/__export/1528933481387/sites/debate/img/2018/06/13/raccoon-1905528_1920_crop1528933247882.jpg_554688468.jpg"
+      },
+      {
+        "url": "http://images.glaciermedia.ca/polopoly_fs/1.23315472.1527377426!/fileImage/httpImage/image.jpg_gen/derivatives/landscape_804/animals.jpg"
+      },
+      {
+        "url": "https://www.elespectador.com/sites/default/files/mapache1.jpg"
+      },
+      {
+        "url": "https://static1.squarespace.com/static/5991deefd2b857ad0785bacd/t/5a9422e48165f549b5f2debc/1519657702175/raccoon+stock+pic.JPG?format=1500w"
+      },
+      {
+        "url": "https://pm1.narvii.com/6636/043605ebac3f0988ee4c0c75485e470f5fcc80d1_hq.jpg"
+      },
+      {
+        "url": "https://pestsgonenow.com/wp-content/uploads/2017/12/raccoon-1905528_1280-1024x712.jpg"
+      },
+      {
+        "url": "https://www.maxpixel.net/static/photo/1x/Retro-Look-Animal-Furry-Mammal-Retro-Cute-Raccoon-1910382.jpg"
+      },
+      {
+        "url": "https://prostaffpestcontrol.com/wp-content/uploads/2018/01/raccoon-1905528_1280-1024x712.jpg"
+      },
+      {
+        "url": "https://i2.wp.com/ensegundos.do/wp-content/uploads/2017/01/Mapache-.jpg?fit=921%2C622&amp;ssl=1"
+      },
+      {
+        "url": "https://www.maxpixel.net/static/photo/1x/Woods-Nature-Forest-Wildlife-Cute-Animal-Raccoon-1905528.jpg"
+      },
+      {
+        "url": "https://i1.wp.com/nixpest.com/wp-content/uploads/2017/09/raccoon-1905528.jpg?w=885&amp;ssl=1"
+      },
+      {
+        "url": "http://shopforclipart.com/images/pink-raccoon-cliparts/21.jpg"
+      },
+      {
+        "url": "https://www.newlifeonahomestead.com/wp-content/uploads/2018/04/raccoon-1905528_960_720.jpg"
+      },
+      {
+        "url": "https://i2.wp.com/karyapemuda.com/wp-content/uploads/2017/10/raccoon-1905528_960_720.jpg?resize=799%2C556"
+      },
+      {
+        "url": "http://www.outfox-world.de/_Resources/Persistent/09bdd8ff060b3238a5ee0d4b7a7674107aeca7ea/Pixabay_1905528_Waschba%CC%88r_Gras-900x492-880x481.jpg"
+      },
+      {
+        "url": "https://img1.wsimg.com/isteam/ip/6e8e3e2d-16bd-4763-8c32-a3a066705007/58f9baf5-7c44-464c-bbb7-1ce88aa2ebf4.jpg/:/rs=w:400,h:500,cg:true,m/cr=w:800,h:500,a:cc"
+      },
+      {
+        "url": "https://wakyma.com/blog/wp-content/uploads/2018/04/raccoon-1905528_1920-770x460.jpg"
+      },
+      {
+        "url": "https://pbs.twimg.com/media/DfxJTb7U0AAgomw.jpg"
+      },
+      {
+        "url": "https://ksr-ugc.imgix.net/assets/020/514/644/0d62b54bca6513248678608612bc3049_original.jpg?w=680&amp;fit=max&amp;v=1520769083&amp;auto=format&amp;q=92&amp;s=639ab0818195da505c4850dbd941ca75"
+      },
+      {
+        "url": "http://www.segusan.es/wp-content/uploads/2018/06/raccoon-1905528_640.jpg"
+      },
+      {
+        "url": "https://globalmagazin.com/uploads/pics/Waschbaer_raccoon-1905528_640_Pixabay_CC_PublicDomain_Edbo23.jpg"
+      },
+      {
+        "url": "https://uranai-no-shiro.info/wp-content/uploads/2018/01/%E3%81%9F%E3%81%AC%E3%81%8D%EF%BC%92%EF%BC%90%EF%BC%91%EF%BC%98.jpg"
+      },
+      {
+        "url": "https://i2.wp.com/kchan-shokai.com/wp-content/uploads/2017/08/38a02522a4eca4924762a38e1b40758e.jpg?fit=640%2C446"
+      },
+      {
+        "url": "https://i2.wp.com/kchan-shokai.com/wp-content/uploads/2017/08/38a02522a4eca4924762a38e1b40758e.jpg?fit=1200%2C835&amp;w=640"
+      },
+      {
+        "url": "https://i0.wp.com/uranai-no-shiro.info/wp-content/uploads/2018/01/%E3%81%9F%E3%81%AC%E3%81%8D%EF%BC%92%EF%BC%90%EF%BC%91%EF%BC%98.jpg?fit=640%2C445&amp;ssl=1"
+      },
+      {
+        "url": "https://thebuffaloreview.files.wordpress.com/2018/04/raccoon.jpg?w=640"
+      },
+      {
+        "url": "https://i2.wp.com/ensegundos.do/wp-content/uploads/2017/01/Mapache-.jpg?resize=640%2C432"
+      },
+      {
+        "url": "https://i2.wp.com/ensegundos.do/wp-content/uploads/2017/01/Mapache-.jpg?fit=921%2C622&amp;ssl=1&amp;w=640"
+      },
+      {
+        "url": "https://thebuffaloreview.files.wordpress.com/2018/04/raccoon.jpg?w=610"
+      },
+      {
+        "url": "https://78.media.tumblr.com/86001f0785676ada1b7f266420be5e21/tumblr_owyclhpYoh1qd7szeo1_500.jpg"
+      },
+      {
+        "url": "https://media.fox5dc.com/media.fox5dc.com/photo/2018/03/13/Raccoon_1520991052319_5086119_ver1.0_640_360.jpg"
+      },
+      {
+        "url": "https://i2.wp.com/www.careercommunicators.com/wp-content/uploads/2017/08/racoon-2.jpg?resize=640%2C340"
+      },
+      {
+        "url": "https://www.lasirena.la/__export/1528933481387/sites/debate/img/2018/06/13/raccoon-1905528_1920_crop1528933247882.jpg_2084490520.jpg"
+      },
+      {
+        "url": "https://www.lasirena.la/__export/1528933481387/sites/debate/img/2018/06/13/raccoon-1905528_1920_crop1528933247882.jpg_2024461655.jpg"
+      },
+      {
+        "url": "https://images.pexels.com/photos/266067/pexels-photo-266067.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=350"
+      },
+      {
+        "url": "https://static1.squarespace.com/static/58e2e0c6b3db2b46d45af83f/t/5a95853c0d92976c7d433dd2/1519748441034/raccoon-1905528.jpg?format=500w"
+      },
+      {
+        "url": "https://www.maxpixel.net/static/photo/640/Retro-Look-Animal-Furry-Mammal-Retro-Cute-Raccoon-1910382.jpg"
+      },
+      {
+        "url": "https://3.bp.blogspot.com/-vbYn_WgtRU8/Wpr54XJLvEI/AAAAAAAAHhw/kf3NX-3mHusgI9w8m1QG22H6TRrxSuHOQCEwYBhgL/w1200-h630-p-k-no-nu/rascal.png"
+      },
+      {
+        "url": "http://coolhousestyle.info/images/free-stock-photo-of-animal-baby-close-up_FILE_fCr40gj1P9LV-BSrL6gmxAHaFJ.jpg"
+      }
+    ],
+    "pagesWithMatchingImages": [
+      {
+        "url": "https://www.maxpixel.net/Woods-Nature-Forest-Wildlife-Cute-Animal-Raccoon-1905528",
+        "pageTitle": "Free photo Woods Nature Forest Wildlife &lt;b&gt;Cute Animal Raccoon&lt;/b&gt; ...",
+        "fullMatchingImages": [
+          {
+            "url": "https://www.maxpixel.net/static/photo/640/Woods-Nature-Forest-Wildlife-Cute-Animal-Raccoon-1905528.jpg"
+          },
+          {
+            "url": "https://www.maxpixel.net/static/photo/1x/Woods-Nature-Forest-Wildlife-Cute-Animal-Raccoon-1905528.jpg"
+          }
+        ]
+      },
+      {
+        "url": "https://www.maxpixel.net/Cute-Wildlife-Raccoon-Nature-Animal-Close-Up-Baby-1962968",
+        "pageTitle": "Free photo &lt;b&gt;Cute&lt;/b&gt; Wildlife &lt;b&gt;Raccoon&lt;/b&gt; Nature &lt;b&gt;Animal&lt;/b&gt; Close Up Baby ...",
+        "fullMatchingImages": [
+          {
+            "url": "https://www.maxpixel.net/static/photo/640/Woods-Nature-Forest-Wildlife-Cute-Animal-Raccoon-1905528.jpg"
+          }
+        ]
+      },
+      {
+        "url": "https://www.canva.com/photos/tag/raccoon/",
+        "pageTitle": "1000+ Free &amp;amp; Premium &lt;b&gt;Raccoon&lt;/b&gt; Stock Photos - Canva",
+        "fullMatchingImages": [
+          {
+            "url": "https://marketplace.canva.com/MACWWTQXfng/1/thumbnail_large/canva-raccoon%2C-animal%2C-wildlife%2C-forest%2C-woods%2C-nature%2C-cute-MACWWTQXfng.jpg"
+          }
+        ]
+      },
+      {
+        "url": "https://www.canva.com/photos/tag/coon/",
+        "pageTitle": "1000+ Free &amp;amp; Premium &lt;b&gt;Coon&lt;/b&gt; Stock Photos - Canva",
+        "fullMatchingImages": [
+          {
+            "url": "https://marketplace.canva.com/MACWWTQXfng/1/thumbnail_large/canva-raccoon%2C-animal%2C-wildlife%2C-forest%2C-woods%2C-nature%2C-cute-MACWWTQXfng.jpg"
+          }
+        ]
+      },
+      {
+        "url": "https://alltotems.com/spirit-animals/raccoon-meaning-symbolism/",
+        "pageTitle": "&lt;b&gt;Raccoon&lt;/b&gt; Symbolism and Meaning | Discover the &lt;b&gt;Raccoon&lt;/b&gt; Spirit ...",
+        "partialMatchingImages": [
+          {
+            "url": "https://dlii32gq8tu41zkp044pt0kl-wpengine.netdna-ssl.com/wp-content/uploads/2018/03/raccoon-symbolism-300x209.jpg"
+          }
+        ]
+      },
+      {
+        "url": "https://pxhere.com/en/photo/1167334",
+        "pageTitle": "Free Images : landscape, nature, forest, &lt;b&gt;animal&lt;/b&gt;, &lt;b&gt;cute&lt;/b&gt;, panorama ...",
+        "fullMatchingImages": [
+          {
+            "url": "https://c.pxhere.com/photos/f4/af/raccoon_animal_wildlife_forest_woods_nature_cute_close_up-1163224.jpg!d"
+          }
+        ]
+      },
+      {
+        "url": "https://cherryhillsun.com/rabid-raccoon-found-in-cherry-hill-744614f25b67",
+        "pageTitle": "Rabid &lt;b&gt;raccoon&lt;/b&gt; found in Cherry Hill – The Cherry Hill Sun",
+        "fullMatchingImages": [
+          {
+            "url": "https://cdn-images-1.medium.com/max/960/1*Hagu2CCgk2iWl_fJqLAXgQ.jpeg"
+          }
+        ]
+      },
+      {
+        "url": "https://resteasypestcontrol.com/cute-critters-think/",
+        "pageTitle": "Nassau &lt;b&gt;Raccoons Cute&lt;/b&gt; Critters? Think Again - Rest Easy Pest Control",
+        "fullMatchingImages": [
+          {
+            "url": "https://resteasypestcontrol.com/wp-content/uploads/2014/10/raccoon.jpg"
+          }
+        ]
+      },
+      {
+        "url": "https://pxhere.com/en/photo/1358349",
+        "pageTitle": "Free Images : &lt;b&gt;animal&lt;/b&gt;, wildlife, wild, fur, critter, natural, mammal ...",
+        "fullMatchingImages": [
+          {
+            "url": "https://c.pxhere.com/photos/f4/af/raccoon_animal_wildlife_forest_woods_nature_cute_close_up-1163224.jpg!d"
+          }
+        ]
+      },
+      {
+        "url": "http://www.fox5dc.com/news/local-news/4-people-bitten-by-possible-rabid-raccoon-in-northwest-dc",
+        "pageTitle": "4 people bitten by possibly rabid &lt;b&gt;raccoon&lt;/b&gt; in Northwest DC - Story ...",
+        "partialMatchingImages": [
+          {
+            "url": "https://media.fox5dc.com/media.fox5dc.com/photo/2018/03/13/Raccoon_1520991052319_5086119_ver1.0_640_360.jpg"
+          }
+        ]
+      },
+      {
+        "url": "https://www.plantbasednews.org/post/florida-teacher-shown-on-video-drowning-raccoons-with-students",
+        "pageTitle": "Florida Teacher Shown On Video Drowning &lt;b&gt;Raccoons&lt;/b&gt; With Students",
+        "partialMatchingImages": [
+          {
+            "url": "https://uploads-ssl.webflow.com/57dc5ba03bd579bc1ed6eab6/5b00099ba76c6f41a0ad766e_raccon-welfar-vegan-rights-ethics.jpg"
+          }
+        ]
+      },
+      {
+        "url": "https://www.pexels.com/photo/animal-baby-close-up-coon-266067/",
+        "pageTitle": "Free stock photo of &lt;b&gt;animal&lt;/b&gt;, baby, close up - Pexels",
+        "partialMatchingImages": [
+          {
+            "url": "https://images.pexels.com/photos/266067/pexels-photo-266067.jpeg?cs=srgb&amp;dl=animal-baby-close-up-266067.jpg&amp;fm=jpg"
+          }
+        ]
+      },
+      {
+        "url": "https://prostaffpestcontrol.com/category/wildlife-removal/",
+        "pageTitle": "Wildlife Removal Archives - ProStaff Pest Control",
+        "partialMatchingImages": [
+          {
+            "url": "https://prostaffpestcontrol.com/wp-content/uploads/2018/01/raccoon-1905528_1280-1024x712.jpg"
+          }
+        ]
+      },
+      {
+        "url": "https://www.pickpik.com/raccoon-animal-wildlife-forest-woods-nature-12510",
+        "pageTitle": "Royalty-Free photo: Grey and brown &lt;b&gt;raccoon&lt;/b&gt; | PickPik",
+        "fullMatchingImages": [
+          {
+            "url": "https://i0.pickpik.com/photos/497/996/840/raccoon-animal-wildlife-forest-preview.jpg"
+          }
+        ]
+      },
+      {
+        "url": "https://resteasypestcontrol.com/animal-control-trapping/",
+        "pageTitle": "&lt;b&gt;Animal&lt;/b&gt; Control | Long Island &amp;amp; NYC | 24/7 Pest Control NYC Long ...",
+        "fullMatchingImages": [
+          {
+            "url": "https://resteasypestcontrol.com/wp-content/uploads/2014/10/raccoon-300x209.jpg"
+          },
+          {
+            "url": "https://resteasypestcontrol.com/wp-content/uploads/2014/10/raccoon.jpg"
+          }
+        ]
+      },
+      {
+        "url": "https://prostaffpestcontrol.com/how-dangerous-are-raccoons/",
+        "pageTitle": "Orlando Wildlife Removal Company Discusses &lt;b&gt;Raccoon&lt;/b&gt; Myths",
+        "partialMatchingImages": [
+          {
+            "url": "https://prostaffpestcontrol.com/wp-content/uploads/2018/01/raccoon-1905528_1280-1024x712.jpg"
+          }
+        ]
+      },
+      {
+        "url": "http://www.dialonepestcontrol.com/bug-blog/2018/3/19/dont-share-your-home-with-raccoons",
+        "pageTitle": "Don&amp;#39;t Share Your Home With &lt;b&gt;Raccoons&lt;/b&gt; — Dial One Franklynn Pest ...",
+        "fullMatchingImages": [
+          {
+            "url": "http://static1.squarespace.com/static/57b00fb78419c2c454efc0cf/57bdce4bd1758e6b2bba2628/5aaf4a021ae6cf0c78edc550/1522726253337/raccoon-1905528_1920.jpg?format=1000w"
+          },
+          {
+            "url": "https://static1.squarespace.com/static/57b00fb78419c2c454efc0cf/57bdce4bd1758e6b2bba2628/5aaf4a021ae6cf0c78edc550/1522726253337/raccoon-1905528_1920.jpg?format=1500w"
+          }
+        ]
+      },
+      {
+        "url": "https://www.pinterest.co.uk/pin/560768591088628182/",
+        "pageTitle": "Szop pracz w Polsce | &lt;b&gt;animal&lt;/b&gt; :) | Pinterest | &lt;b&gt;Raccoons&lt;/b&gt; and &lt;b&gt;Animal&lt;/b&gt;",
+        "fullMatchingImages": [
+          {
+            "url": "https://i.pinimg.com/originals/80/c7/ca/80c7cadc4650b9d70165e8f718db31bf.jpg"
+          }
+        ]
+      },
+      {
+        "url": "https://www.icenews.is/2018/03/21/a-dog-found-a-racoon-in-a-hole-near-hafnir/",
+        "pageTitle": "A &lt;b&gt;Dog&lt;/b&gt; Found a Racoon in a Hole Near Hafnir - IceNews",
+        "fullMatchingImages": [
+          {
+            "url": "https://www.icenews.is/wp-content/uploads/2018/03/raccoon-1905528_1920-700x487.jpg"
+          }
+        ]
+      },
+      {
+        "url": "http://www.fox5dc.com/news/video-shows-police-running-over-possibly-rabid-raccoon-1",
+        "pageTitle": "Video shows police running over possibly rabid &lt;b&gt;raccoon&lt;/b&gt; - Story ...",
+        "partialMatchingImages": [
+          {
+            "url": "https://media.fox5dc.com/media.fox5dc.com/photo/2018/03/13/Raccoon_1520991052319_5086119_ver1.0_640_360.jpg"
+          }
+        ]
+      },
+      {
+        "url": "https://pixabay.com/en/photos/surprise/?cat=animals",
+        "pageTitle": "&lt;b&gt;Animals&lt;/b&gt; - Pixabay",
+        "fullMatchingImages": [
+          {
+            "url": "https://cdn.pixabay.com/photo/2016/12/14/03/08/raccoon-1905528__340.jpg"
+          }
+        ]
+      },
+      {
+        "url": "http://www.catawbacountync.gov/news/first-case-of-rabies-confirmed-in-catawba-county-in-2018/",
+        "pageTitle": "First Case of Rabies Confirmed in Catawba County in 2018",
+        "partialMatchingImages": [
+          {
+            "url": "http://www.catawbacountync.gov/site/assets/files/3497/raccoon.jpeg"
+          }
+        ]
+      },
+      {
+        "url": "http://shamrockwildlifeservices.com/animal-removal-nw-indiana/raccoons-removal/",
+        "pageTitle": "&lt;b&gt;Raccoon&lt;/b&gt; Removal | &lt;b&gt;Raccoon&lt;/b&gt; Trapping | &lt;b&gt;Raccoon&lt;/b&gt; Control | (219 ...",
+        "fullMatchingImages": [
+          {
+            "url": "http://shamrockwildlifeservices.com/wp-content/uploads/2017/12/raccoonremoval1.jpg"
+          }
+        ]
+      },
+      {
+        "url": "https://www.pinterest.com/pin/773141461001725524/",
+        "pageTitle": "Esquilo, &lt;b&gt;Animal&lt;/b&gt;, Floresta, Filiais | Pin2 | Pinterest",
+        "fullMatchingImages": [
+          {
+            "url": "https://i.pinimg.com/originals/80/c7/ca/80c7cadc4650b9d70165e8f718db31bf.jpg"
+          }
+        ]
+      },
+      {
+        "url": "https://pixabay.com/en/main-coon-maincoon-cat-kitten-2784916/",
+        "pageTitle": "Main &lt;b&gt;Coon&lt;/b&gt; Maincoon Cat · Free photo on Pixabay",
+        "fullMatchingImages": [
+          {
+            "url": "https://cdn.pixabay.com/photo/2016/12/14/03/08/raccoon-1905528__180.jpg"
+          }
+        ]
+      },
+      {
+        "url": "https://www.wildmantrapping.com/raccoon/",
+        "pageTitle": "&lt;b&gt;Raccoon&lt;/b&gt; — Wildman Wildlife Removal and Exclusion",
+        "fullMatchingImages": [
+          {
+            "url": "https://static1.squarespace.com/static/5991deefd2b857ad0785bacd/t/599d991149fc2b1b80aa73a3/1503500562738/raccoon+stock+pic.JPG?format=750w"
+          }
+        ]
+      },
+      {
+        "url": "https://thebuffaloreview.wordpress.com/2018/04/04/authorities-warn-of-distemper-outbreak-in-niagara-county-raccoons/",
+        "pageTitle": "Authorities warn of distemper outbreak in Niagara County &lt;b&gt;raccoons&lt;/b&gt; ...",
+        "partialMatchingImages": [
+          {
+            "url": "https://thebuffaloreview.files.wordpress.com/2018/04/raccoon.jpg?w=640"
+          },
+          {
+            "url": "https://thebuffaloreview.files.wordpress.com/2018/04/raccoon.jpg?w=610"
+          }
+        ]
+      },
+      {
+        "url": "https://steemd.com/recent/raccoon",
+        "pageTitle": "&lt;b&gt;raccoon&lt;/b&gt; | Recent | Steem",
+        "fullMatchingImages": [
+          {
+            "url": "https://steemitimages.com/DQmNr3GDHeyvxJKr7MmkLGUZ8i2DgTrstwoPRwpF296vhhk/raccoon-1905528__340.jpg"
+          }
+        ]
+      },
+      {
+        "url": "http://www.insidenova.com/news/infive-fake-cop-makes-arrest-suffer-raccoon-bites-and-bus/article_f8b14f1e-550d-11e8-b90f-bbf2704c3d14.html",
+        "pageTitle": "InFive: Fake cop makes arrest, 5 suffer &lt;b&gt;raccoon&lt;/b&gt; bites, and bus ...",
+        "fullMatchingImages": [
+          {
+            "url": "https://bloximages.chicago2.vip.townnews.com/insidenova.com/content/tncms/assets/v3/editorial/4/f6/4f6b3fe4-550f-11e8-abea-ab7e1ab06598/5af57fee2d5a8.image.jpg?resize=905%2C630"
+          },
+          {
+            "url": "https://bloximages.chicago2.vip.townnews.com/insidenova.com/content/tncms/assets/v3/editorial/4/f6/4f6b3fe4-550f-11e8-abea-ab7e1ab06598/5af57fee2d5a8.image.jpg"
+          }
+        ]
+      },
+      {
+        "url": "https://www.pickpik.com/baby-raccoon-wildlife-wild-funny-adorable-fur-89661",
+        "pageTitle": "Royalty-Free photo: Two brown &lt;b&gt;raccoons&lt;/b&gt; on gray wooden planks ...",
+        "fullMatchingImages": [
+          {
+            "url": "https://i0.pickpik.com/photos/497/996/840/raccoon-animal-wildlife-forest-thumb.jpg"
+          },
+          {
+            "url": "https://i0.pickpik.com/photos/497/996/840/raccoon-animal-wildlife-forest-preview.jpg"
+          }
+        ]
+      },
+      {
+        "url": "http://www.careercommunicators.com/drum-roll-please/",
+        "pageTitle": "Drum roll, please… – Career Communicators",
+        "partialMatchingImages": [
+          {
+            "url": "https://i2.wp.com/www.careercommunicators.com/wp-content/uploads/2017/08/racoon-2.jpg?resize=640%2C340"
+          }
+        ]
+      },
+      {
+        "url": "https://www.animalsmix.com/animals/cute-animals-raccoon-ea41fa.html",
+        "pageTitle": "Animals For &lt;b&gt;Cute Animals Raccoon&lt;/b&gt; | www.animalsmix.com",
+        "partialMatchingImages": [
+          {
+            "url": "https://www.maxpixel.net/static/photo/1x/Woods-Nature-Forest-Wildlife-Cute-Animal-Raccoon-1905528.jpg"
+          }
+        ]
+      },
+      {
+        "url": "https://steemit.com/halloween/@habituallyhannah/4wwnfu-halloween-costumes-wild-raccoon-and-animal-control-officer",
+        "pageTitle": "Halloween Costumes! Wild &lt;b&gt;Raccoon&lt;/b&gt; and &lt;b&gt;Animal&lt;/b&gt; Control Officer ...",
+        "fullMatchingImages": [
+          {
+            "url": "https://steemitimages.com/DQmNr3GDHeyvxJKr7MmkLGUZ8i2DgTrstwoPRwpF296vhhk/raccoon-1905528__340.jpg"
+          }
+        ]
+      },
+      {
+        "url": "https://www.icenews.is/information/raccoon/",
+        "pageTitle": "&lt;b&gt;raccoon&lt;/b&gt; | IceNews - Daily News",
+        "fullMatchingImages": [
+          {
+            "url": "https://www.icenews.is/wp-content/uploads/2018/03/raccoon-1905528_1920-700x487.jpg"
+          }
+        ]
+      },
+      {
+        "url": "http://runsickcattle.com/group/racoon-pic/",
+        "pageTitle": "Racoon Pic Group (61+)",
+        "fullMatchingImages": [
+          {
+            "url": "http://runsickcattle.com/data/out/21/538172.jpg"
+          }
+        ]
+      },
+      {
+        "url": "https://www.pinterest.co.uk/pin/815503444996369303/",
+        "pageTitle": "Bear, Cub, Black, Wildlife, &lt;b&gt;Animal&lt;/b&gt;, Nature, &lt;b&gt;Cute&lt;/b&gt;, Young | &lt;b&gt;animals&lt;/b&gt; &amp;lt;3 ...",
+        "fullMatchingImages": [
+          {
+            "url": "https://i.pinimg.com/originals/80/c7/ca/80c7cadc4650b9d70165e8f718db31bf.jpg"
+          }
+        ]
+      },
+      {
+        "url": "https://encyclopaediaoftrivia.blogspot.com/2017/06/raccoon.html",
+        "pageTitle": "Encyclopedia of Trivia: &lt;b&gt;Raccoon&lt;/b&gt;",
+        "fullMatchingImages": [
+          {
+            "url": "https://2.bp.blogspot.com/-u0EcXwqzirM/WUjTP6sH10I/AAAAAAAAWXI/dkiEksUSr1gq3AVbywWjQkHOhiQAKc4IgCEwYBhgL/s1600/raccoon-1905528__340.jpg"
+          }
+        ]
+      },
+      {
+        "url": "http://wallahwildliferemovalandrepairs.com/",
+        "pageTitle": "Wallah Wildlife LKN: &lt;b&gt;Animal&lt;/b&gt; &amp;amp; Wildlife Control Services | Cornelius ...",
+        "partialMatchingImages": [
+          {
+            "url": "http://wallahwildliferemovalandrepairs.com/files/2018/05/raccoon-1905528_640.jpg?w=316&amp;h=237&amp;a=t"
+          }
+        ]
+      },
+      {
+        "url": "https://www.pinterest.com/pin/688206386780517590/",
+        "pageTitle": "Resultado de imagem para quati | trabalho de ciencias | Pinterest ...",
+        "fullMatchingImages": [
+          {
+            "url": "https://i.pinimg.com/originals/80/c7/ca/80c7cadc4650b9d70165e8f718db31bf.jpg"
+          }
+        ]
+      },
+      {
+        "url": "https://www.swassn.com/finding-the-best-raccoon-services-around-me/",
+        "pageTitle": "Finding the best &lt;b&gt;raccoon&lt;/b&gt; services around me | Swan Home Network",
+        "partialMatchingImages": [
+          {
+            "url": "https://www.swassn.com/wp-content/uploads/2017/11/ertyuytrtyj.jpeg"
+          }
+        ]
+      },
+      {
+        "url": "https://pestsgonenow.com/raccoon-poop-dangers/",
+        "pageTitle": "Identify &lt;b&gt;Raccoon&lt;/b&gt; Poop, Its Danger, and How to Handle It - Pests ...",
+        "partialMatchingImages": [
+          {
+            "url": "https://pestsgonenow.com/wp-content/uploads/2017/12/raccoon-1905528_1280-1024x712.jpg"
+          }
+        ]
+      },
+      {
+        "url": "https://www.newlifeonahomestead.com/chicken-predators/",
+        "pageTitle": "10 Chicken Predators and How to Keep Them at Bay • New Life On ...",
+        "partialMatchingImages": [
+          {
+            "url": "https://www.newlifeonahomestead.com/wp-content/uploads/2018/04/raccoon-1905528_960_720.jpg"
+          }
+        ]
+      },
+      {
+        "url": "https://www.animalsmix.com/animals/raccoon-base-animals-5f141e.html",
+        "pageTitle": "&lt;b&gt;Animals&lt;/b&gt; For &lt;b&gt;Raccoon&lt;/b&gt; Base &lt;b&gt;Animals&lt;/b&gt; | www.animalsmix.com",
+        "partialMatchingImages": [
+          {
+            "url": "http://pestsgonenow.com/wp-content/uploads/2017/12/raccoon-1905528_1280-1024x712.jpg"
+          }
+        ]
+      },
+      {
+        "url": "https://www.pexels.com/photo/boy-cute-handsome-mischievous-39588/",
+        "pageTitle": "Free stock photo of boy, &lt;b&gt;cute&lt;/b&gt;, handsome - Pexels",
+        "partialMatchingImages": [
+          {
+            "url": "https://images.pexels.com/photos/266067/pexels-photo-266067.jpeg?cs=srgb&amp;dl=nature-forest-animal-266067.jpg&amp;fm=jpg"
+          }
+        ]
+      },
+      {
+        "url": "http://shopforclipart.com/clipart/pink-raccoon-cliparts-21.htm",
+        "pageTitle": "Pink &lt;b&gt;Raccoon&lt;/b&gt; Cliparts - Shop of Clipart Library",
+        "partialMatchingImages": [
+          {
+            "url": "http://shopforclipart.com/images/pink-raccoon-cliparts/21.jpg"
+          }
+        ]
+      },
+      {
+        "url": "http://shopforclipart.com/clipart/pink-raccoon-cliparts-13.htm",
+        "pageTitle": "Pink &lt;b&gt;Raccoon&lt;/b&gt; Cliparts - Shop of Clipart Library",
+        "partialMatchingImages": [
+          {
+            "url": "http://shopforclipart.com/images/pink-raccoon-cliparts/21.jpg"
+          }
+        ]
+      },
+      {
+        "url": "http://myhomeimprovement.org/home-remodel/raccoon-templates",
+        "pageTitle": "Most Popular &lt;b&gt;Raccoon&lt;/b&gt; Templates - MyHomeImprovement",
+        "fullMatchingImages": [
+          {
+            "url": "https://marketplace.canva.com/MACWWTQXfng/1/thumbnail_large/canva-raccoon%2C-animal%2C-wildlife%2C-forest%2C-woods%2C-nature%2C-cute-MACWWTQXfng.jpg"
+          }
+        ]
+      },
+      {
+        "url": "http://comprar-en-internet.net/worksheets/racoons.html",
+        "pageTitle": "Racoons - Free Worksheets Library | Download and Print ...",
+        "fullMatchingImages": [
+          {
+            "url": "http://www.icenews.is/wp-content/uploads/2018/03/raccoon-1905528_1920-700x487.jpg"
+          }
+        ]
+      },
+      {
+        "url": "https://www.silverlakewildlifesanctuary.org/photo-gallery/",
+        "pageTitle": "Photo Gallery — Silver Lake Wildlife Sanctuary",
+        "fullMatchingImages": [
+          {
+            "url": "https://static1.squarespace.com/static/58c891cd37c58161b5d58f42/58c8a9ae1b10e3a1c3bec2e7/59752667ebbd1a4c6600be04/1500849786272/raccoon-1905528_1920+copy+2.jpg?format=500w"
+          }
+        ]
+      },
+      {
+        "url": "http://dinocro.info/?k=Raccoon+Roundworm+Baylisascaris+Procyonis",
+        "pageTitle": "&lt;b&gt;Raccoon&lt;/b&gt; Roundworm Baylisascaris Procyonis - dinocro.info",
+        "fullMatchingImages": [
+          {
+            "url": "http://shamrockwildlifeservices.com/wp-content/uploads/2017/12/raccoonremoval1.jpg"
+          }
+        ]
+      }
+    ],
+    "visuallySimilarImages": [
+      {
+        "url": "http://www.animals-zone.com/wp-content/uploads/2010/09/Raccoon-2.jpg"
+      },
+      {
+        "url": "https://i.pinimg.com/736x/26/e5/45/26e54554ffe983f01839b1ecdb6f6503--baby-raccoon-wild-animals.jpg"
+      },
+      {
+        "url": "https://hdanimalspot.com//storage/upload/raccoon-wallpaper/raccoon-wallpaper-7.jpg"
+      },
+      {
+        "url": "https://i.pinimg.com/originals/26/2b/48/262b482f2edf82b5237f353a5576ab95.jpg"
+      },
+      {
+        "url": "http://thumbpress.com/wp-content/uploads/2013/11/13-Pics-of-Cute-Animals-Saying-Hi-to-You-Will-Melt-Your-Heart-13.jpg"
+      },
+      {
+        "url": "https://i.pinimg.com/236x/53/18/44/5318443cbd52e832c49c1a061ec7d036.jpg"
+      },
+      {
+        "url": "https://i.pinimg.com/originals/3e/1c/6e/3e1c6e8f34a35ba3df43739d0dec0941.jpg"
+      },
+      {
+        "url": "https://i.pinimg.com/736x/bd/82/95/bd82958c9c000355bcabec2b05be30ee--baby-raccoon-racoon.jpg"
+      },
+      {
+        "url": "https://www.maxpixel.net/static/photo/1x/Wildlife-Cute-Nature-Animal-Raccoon-840427.jpg"
+      }
+    ],
+    "bestGuessLabels": [
+      {
+        "label": "cute animal raccoon",
+        "languageCode": "en"
+      }
+    ]
+  }
+}
+
+
+
+
+   
+
+
+
+function myFunction(type) {
+    var description =  myObj.labelAnnotations[0].description;
+    var sound1 = new Audio('Recycle.m4a');
+    var sound2 = new Audio('Compostable.m4a');
+    
+    if (type === "compost") {
+        sound2.play();
+        greeting = "This is compost"
+    }
+    
+    
+    if (description == "bottle") {
+        greeting = "Recycling";
+        sound1.play();
+       
+    } else if (description == "aluminum can") {
+        greeting = "Recycling";
+        sound1.play();
+    } else if (description == "food") {
+        greeting = "compost";
+        sound2.play();
+    }
+    
+   
+    document.getElementById("demo").innerHTML = greeting;
+}
+     var apiUrl = "https://vision.googleapis.com/v1/images:annotate?key=AIzaSyDApr3kFP5jBzjOPhjEO673eCrvF7YFbRM"
+     
+     var imageUrl = "https://cdn1.medicalnewstoday.com/content/images/headlines/266/266765/two-heads-of-broccoli.jpg"
+     
+     var postData = {
+                    "requests":[
+                    {
+                      "image":{
+                        "source":{
+                          "imageUri":
+                           imageUrl
+                        }
+                      },
+                      "features":[
+                        {
+                          "type":"LABEL_DETECTION",
+                          "maxResults":1
+                        }
+                      ]
+                    }
+                  ]
+                }
+     
+     fetch(apiUrl, {method:"post", body: JSON.stringify(postData)})
+        .then(response => response.json())
+        .then(jsonResponse => {
+            console.log("success")
+            console.log(jsonResponse)
+            myFunction("compost")
+     })
+</script>
+   
+    <div> 
+       <p>Recycling: <br>
+    This is the audio file that will be played if you put recycling into a regular trash can.</p>
+        <audio controls="">
+            <source src="Recycle.m4a" type="audio/mp4"/>
+        </audio> 
+    </div>
+    
+    <div>
+       <p>Compostable: <br>
+       This is the audio file that will be played if you put compost into a regular trash can.</p>
+        <audio controls="" src="Compostable.m4a" type="audio/mp4"></audio>
+    </div>
+
+   <div>
+      <p>Correct Bin:<br>
+  This is the audio file that will be played if you put your trash, recycling or compost into the right container.</p>
+       <audio controls="" src="Correct.m4a"type="audio/mp4"></audio>
+   </div>
+
+Correct.m4a
+</body>
+</html>
